@@ -1,0 +1,38 @@
+
+{
+	"id": 1,
+	"nombres": "Edgar Erasmo",
+	"apellidos": "Carrillo Bastidas",
+	"documento": "1784673",
+	"parentezco": "Padre",
+	"direccion": "Calle 13 av 12",
+	"barrio": "El Contento",
+	"celular": "3102584177",
+	"celularTrabajo": "3144134538",
+	"celularOpcional": "3156783456",
+	"correo": "edgarcarrillo@outlook.com"
+},
+{
+	"id": 2,
+	"nombres": "Clara Lucía",
+	"apellidos": "Bermont Alvarez",
+	"documento": "54671202",
+	"parentezco": "Madre",
+	"direccion": "Calle 14 av 11",
+    "celularTrabajo": "3144134538",
+	"celularOpcional": "3156783456",
+	"correo": "claralucia1976@gmail.com",
+},
+{
+	"id": 3,
+	"nombres": "Graciela",
+	"apellidos": "Rojas Guerrero",
+	"documento": "941255654",
+	"parentezco": "Madre",
+	"direccion": "Calle 1 av 19",
+	"barrio": "Ceiba 2",
+	"celular": "3164257654",
+	"celularTrabajo": "3116574638",
+	"celularOpcional": "3165673456",
+	"correo": "gracielarojasg@gmail.com"
+}
