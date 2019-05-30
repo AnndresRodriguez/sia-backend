@@ -15,25 +15,25 @@ router.get('/all/:id', async (req, res) => {
 router.get('/:id', async (req, res) => {
   const Alumnos = await Alumno.find({id: req.params.id})
   res.json(Alumnos)
-});
+}); 
+
+router.post("/", async(req, res) => {
+  const nuevoAlumno = new Alumno(req.body);
+  nuevoAlumno.save();
+  res.json(nuevoAlumno)
+})
 
 router.put("/:id", async (req, res) => {
 
   const alumnoUpdated = await Alumno.findByIdAndUpdate(req.params.id, req.body);
   res.json(alumnoUpdated);
-  // Alumno.findAndModify({
-  // 	query: { id: req.params.id },
-  // 	update:{ $set: { nombres: req.body.nombres,
-  // 	                 apellidos: req.body.apellidos, 
-  // 	                 documento: req.body.documento, 
-  // 	                 direccion: req.body.direccion,
-  // 	                 barrio: req.body.barrio,
-  // 	                 celular: req.body.celular 
-  // 	                  } } 
-  // });
-  // res.json({
-  //   updated:true
-  // });
+});
+
+router.delete("/:id", async (req, res) => {
+  await Alumno.findByIdAndRemove(req.params.id);
+  res.json({
+    removed:true
+  });
 });
 
 module.exports = router

@@ -14,11 +14,16 @@ router.post("/", async(req, res) => {
   nuevoAcudiente.save();
   res.json(nuevoAcudiente)
 })
-
+ 
 //Obtener Acudiente por ID
 router.get('/:id', async (req, res) => {
-  const Acudiente = await Acudiente.findById(req.params.id)
-  res.json(Acudiente)
+  const Acudientes = await Acudiente.find({id: req.params.id})
+  res.json(Acudientes)
+});
+
+router.post('/documento/:id', async (req, res) => {
+  const Acudientes = await Acudiente.find({documento: req.params.id})
+  res.json(Acudientes)
 });
 
 //Editar Acudiente

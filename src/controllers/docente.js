@@ -17,8 +17,8 @@ router.post("/", async(req, res) => {
 
 //Obtener Docente
 router.get('/:id', async (req, res) => {
-  const Docente = await Docente.findById(req.params.id)
-  res.json(Docente)
+  const docentes = await Docente.findById(req.params.id)
+  res.json(docentes)
 });
 
 //Editar Docente
