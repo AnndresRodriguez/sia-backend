@@ -5,7 +5,7 @@ import { MongooseAutoIncrementID } from 'mongoose-auto-increment-reworked';
 const options = {
   field: 'id', 
   incrementBy: 1, 
-  startAt: 11,
+  startAt: 12,
   reset: 'resetCount',
   unique: true
 };

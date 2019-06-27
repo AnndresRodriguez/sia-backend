@@ -5,12 +5,13 @@ import { MongooseAutoIncrementID } from 'mongoose-auto-increment-reworked';
 const options = {
   field: 'id', 
   incrementBy: 1, 
-  startAt: 23,
+  startAt: 24,
   reset: 'resetCount',
   unique: true
 };
 
 const Curso = new Schema({
+	id: Number,
     idDocente: Number,
     nombre: String,
     alumnosInscritos: Number,

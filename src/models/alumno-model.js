@@ -5,12 +5,13 @@ import { MongooseAutoIncrementID } from 'mongoose-auto-increment-reworked';
 const options = {
   field: 'id', 
   incrementBy: 1, 
-  startAt: 74,
+  startAt: 71,
   reset: 'resetCount',
-  unique: true
+  unique: false
 };
 
 const Alumno= new Schema({
+    id: Number,
     nombres: String,
     apellidos: String,
     codigo: String,
@@ -24,7 +25,7 @@ const Alumno= new Schema({
     barrio: String,
     celular: String,
     correo: { type: String, default: 'No registrado'},
-    idAcudiente: String 
+    idAcudiente: Number 
 })
 
 const plugin = new MongooseAutoIncrementID(Alumno, 'Alumno', options);

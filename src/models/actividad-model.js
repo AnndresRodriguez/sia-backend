@@ -5,7 +5,7 @@ import { MongooseAutoIncrementID } from 'mongoose-auto-increment-reworked';
 const options = {
   field: 'id', 
   incrementBy: 1, 
-  startAt: 6,
+  startAt: 9,
   reset: 'resetCount',
   unique: true
 };
@@ -13,9 +13,10 @@ const options = {
 const Actividad = new Schema({
     idMateria: Number,
     tema: String,
-    descripcion: Number,
+    descripcion: String,
     indicaciones: String,
     observaciones: String,
+    fecha: String,
     nota: Number
 })
 

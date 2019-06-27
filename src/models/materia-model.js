@@ -12,9 +12,8 @@ const options = {
 
 const Materia = new Schema({
     idDocente: Number,
-    idPeriodo: Number,
+    idPeriodo: String,
     nombre: String,
-    descripcion: String,
     horas: Number,
     notaFinal: Number
 })
