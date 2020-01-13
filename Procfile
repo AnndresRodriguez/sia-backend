@@ -1,1 +1,1 @@
-web: pm2 start src/server.js
+web: nodemon --exec npm run babel-node
