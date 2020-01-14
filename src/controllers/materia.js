@@ -58,92 +58,92 @@ router.delete("/:id", async (req, res) => {
   });
 });
 
-router.post("/addMany", (req, res)=> {
+// router.post("/addMany", (req, res)=> {
 
-Materia.insertMany([
-{
-  "id": 1,
-  "idDocente": 1,
-  "nombre": "Matematica",
-  "horas": 6,
-  "notaFinal": 0
-},
-{
-  "id": 2,
-  "idDocente": 2,
-  "nombre": "Español",
-  "horas": 6,
-  "notaFinal": 0
-},
-{
-  "id": 3,
-  "idDocente": 3,
-  "nombre": "Ingles",
-  "horas": 4,
-  "notaFinal": 0
-},
-{
-  "id": 4,
-  "idDocente": 4,
-  "nombre": "Sociales",
-  "horas": 4,
-  "notaFinal": 0
-},
-{
-  "id": 5,
-  "idDocente": 5,
-  "nombre": "Biologia",
-  "horas": 4,
-  "notaFinal": 0
-},
-{
-  "id": 6,
-  "idDocente": 6,
-  "nombre": "Artistica",
-  "horas": 2,
-  "notaFinal": 0
-},
-{
-  "id": 7,
-  "idDocente": 7,
-  "nombre": "Informatica",
-  "horas": 3,
-  "notaFinal": 0
-},
-{
-  "id": 8,
-  "idDocente": 8,
-  "nombre": "Religión",
-  "horas": 2,
-  "notaFinal": 0
-},
-{
-  "id": 9,
-  "idDocente": 9,
-  "nombre": "Ética",
-  "horas": 2,
-  "notaFinal": 0
-},
-{
-  "id": 10,
-  "idDocente": 10,
-  "nombre": "Física",
-  "horas": 4,
-  "notaFinal": 0
-},
-{
-  "id": 11,
-  "idDocente": 11,
-  "nombre": "Química",
-  "horas": 4,
-  "notaFinal": 0
-}
+// Materia.insertMany([
+// {
+//   "id": 1,
+//   "idDocente": 1,
+//   "nombre": "Matematica",
+//   "horas": 6,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 2,
+//   "idDocente": 2,
+//   "nombre": "Español",
+//   "horas": 6,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 3,
+//   "idDocente": 3,
+//   "nombre": "Ingles",
+//   "horas": 4,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 4,
+//   "idDocente": 4,
+//   "nombre": "Sociales",
+//   "horas": 4,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 5,
+//   "idDocente": 5,
+//   "nombre": "Biologia",
+//   "horas": 4,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 6,
+//   "idDocente": 6,
+//   "nombre": "Artistica",
+//   "horas": 2,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 7,
+//   "idDocente": 7,
+//   "nombre": "Informatica",
+//   "horas": 3,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 8,
+//   "idDocente": 8,
+//   "nombre": "Religión",
+//   "horas": 2,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 9,
+//   "idDocente": 9,
+//   "nombre": "Ética",
+//   "horas": 2,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 10,
+//   "idDocente": 10,
+//   "nombre": "Física",
+//   "horas": 4,
+//   "notaFinal": 0
+// },
+// {
+//   "id": 11,
+//   "idDocente": 11,
+//   "nombre": "Química",
+//   "horas": 4,
+//   "notaFinal": 0
+// }
 
-    ]);
-  res.json({
-    cursoAdded: true
-  })
+//     ]);
+//   res.json({
+//     cursoAdded: true
+//   })
 
 
-})
+// })
 module.exports = router
