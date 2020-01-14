@@ -62,7 +62,7 @@ app.use(bodyParser.json());
 app.set("port", process.env.PORT || 3000);
 
 //Database
-mongoose.connect(`${process.env.PASSWORD_DB}` , {dbName: 'sia', useNewUrlParser: true, useUnifiedTopology: true}) 
+mongoose.connect(`${ process.env.PASSWORD_DB }` , {dbName: 'sia', useNewUrlParser: true, useUnifiedTopology: true}) 
 //mongoose.connect("mongodb://localhost/sia" , {useNewUrlParser: true}) 
 .then(db => console.log('Connection established'))
 .catch(err => console.log(err));
