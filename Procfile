@@ -1,1 +1,1 @@
-web: pm2 start npm -- start
+web: node src/server.js
