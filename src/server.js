@@ -10,6 +10,8 @@ const bodyParser = require("body-parser");
 // const uuid = require("uuid/v4");
 require('dotenv').config();
 
+
+
 // Routes Controllers
 const alumnoController = require("./controllers/alumno");
 const docenteController = require("./controllers/docente");
@@ -17,6 +19,9 @@ const acudienteController = require("./controllers/acudiente");
 const cursoController = require("./controllers/curso.js");
 const materiaController = require("./controllers/materia.js");
 const actividadController = require("./controllers/actividad.js");
+
+
+
 
 
 //------------------------------Multer-----------------------------------------
@@ -78,12 +83,13 @@ app.use(express.json());
 
 // Routes Controllers
 
-app.use('/alumno', alumnoController);
-app.use('/docente', docenteController);
-app.use('/acudiente', acudienteController);
-app.use('/cursos', cursoController);
-app.use('/materias', materiaController);
-app.use('/actividad', actividadController);
+
+app.use('/api/alumno', alumnoController);
+app.use('/api/docente', docenteController);
+app.use('/api/acudiente', acudienteController);
+app.use('/api/cursos', cursoController);
+app.use('/api/materias', materiaController);
+app.use('/api/actividad', actividadController);
 
 //Static Files
 

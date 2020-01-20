@@ -3,6 +3,7 @@ const router = express.Router();
 const Actividad = require("../models/actividad-model.js");
 
 //Obtener todas las Actividades
+
 router.get("/", async(req, res) => {
   const actividades = await Actividad.find();
   res.json(actividades)
