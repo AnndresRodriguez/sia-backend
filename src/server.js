@@ -6,7 +6,6 @@ const path = require("path");
 // const multer = require("multer");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 // const uuid = require("uuid/v4");
 require('dotenv').config();
 
@@ -59,18 +58,18 @@ const actividadController = require("./controllers/actividad.js");
 app.use(cors());
 
 //Bodyparser
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 
 //Settings Port
 app.set("port", process.env.PORT || 3000);
 
 //Database
-mongoose.connect(`${ process.env.PASSWORD_DB }` , {dbName: 'sia', useNewUrlParser: true, useUnifiedTopology: true}) 
-//mongoose.connect("mongodb://localhost/sia" , {useNewUrlParser: true}) 
-.then(db => console.log('Connection established'))
-.catch(err => console.log(err));
+mongoose.connect(`${ process.env.PASSWORD_DB }`, { dbName: 'sia', useNewUrlParser: true, useUnifiedTopology: true })
+    //mongoose.connect("mongodb://localhost/sia" , {useNewUrlParser: true}) 
+    .then(db => console.log('Connection established'))
+    .catch(err => console.log(err));
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 //Connection Private
@@ -97,5 +96,5 @@ app.use('/api/actividad', actividadController);
 
 //Listening server
 app.listen(app.get("port"), () => {
-  console.log("Server on port", app.get("port"));
+    console.log("Server on port", app.get("port"));
 });
